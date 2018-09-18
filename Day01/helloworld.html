@@ -1,8 +1,20 @@
+<!--https://github.com/prabhu-durasoft/Sep-18-20-2018-->
 <html>
     <head>
         <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            //JSX
+            let h1 = <h1>Hello React</h1>;
+            ReactDOM.render(h1,document.getElementById("intuit"));
+
+
+            //let h1 = React.createElement("h1",null,"Hello World");
+            //ReactDOM.render(h1,document.getElementById("intuit"));
+        </script>
     </body>
 </html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            let form = (<div>
+                <input type="text" placeholder="Name"></input>
+                <br/>
+                <button>Click</button>    
+            </div>);
+            ReactDOM.render(form,document.getElementById("intuit"));
+
+
+//            let breakLine = <br/>;
+//            let tb = <input type="text" placeholder="Name"></input>;
+//            ReactDOM.render(tb,document.getElementById("intuit"));
+        </script>
+    </body>
+</html>    
