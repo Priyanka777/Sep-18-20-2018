@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/jsx">
+            let cities = [
+                { country: "France", capital: "Paris" },
+                { country: "India", capital: "New Delhi" },
+                { country: "Israel", capital: "Telaviv" },
+                { country: "Lisbon", capital: "Portugal" }
+            ];
+            let getRows = function(){
+                let rows = [];
+                cities.forEach(item => {
+                    let row = <tr><td>{item.country}</td><td>{item.capital}</td></tr>;
+                    rows.push(row);    
+                });
+                return rows;
+            }
+            
+            let table = (<table>
+                <thead>
+                    <tr>
+                        <th>Country</th>    
+                        <th>Capital</th>    
+                    </tr>    
+                </thead>
+                <tbody>
+                    { getRows() }
+                </tbody>    
+            </table>);
+
+
+//            let table = (<table>
+//                <thead>
+//                    <tr>
+//                        <th>Country</th>    
+//                        <th>Capital</th>    
+//                    </tr>    
+//                </thead>
+//                <tbody>
+//                    { cities.map( item => <tr><td>{item.country}</td><td>{item.capital}</td></tr>) }
+//                </tbody>    
+//            </table>);
+            ReactDOM.render(table,document.getElementById("root"));
+        </script>
+    </body>
+</html>
