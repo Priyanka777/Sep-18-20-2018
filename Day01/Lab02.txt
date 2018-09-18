@@ -1,0 +1,15 @@
+Create Lab02.html file. Write React Code to do the following.
+
+You will display the following cities in a table.
+
+France, Paris
+India, New Delhi
+Israel, Telaviv
+Lisbon, Portugal
+
+Now, This is what you need to do
+
+1) You will store these cities in an array and display them in a table dynamically. :). The format is upto you to decide.
+2) If the city name begins with the letter 'P' the background color of the item will be blue in color
+
+Hint: Construct an Array of JSX elements
