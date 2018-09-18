@@ -1,0 +1,7 @@
+DOM -> 
+Virtual DOM -> Temporary data structure
+It gathers all the changes required
+And flushes it out to the real DOM
+
+
+Components
