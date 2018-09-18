@@ -14,9 +14,17 @@
                 { country: "Lisbon", capital: "Portugal" }
             ];
             let getRows = function(){
+                let citiesStartingWithLetterP = "blue"
                 let rows = [];
                 cities.forEach(item => {
-                    let row = <tr><td>{item.country}</td><td>{item.capital}</td></tr>;
+                    let row = undefined;
+                    if(item.capital.startsWith("P")) {
+                        row = <tr style={{backgroundColor: `${citiesStartingWithLetterP}`}}><td>{item.country}</td><td>{item.capital}</td></tr>;
+                    }
+                    else {
+                        row = <tr><td>{item.country}</td><td>{item.capital}</td></tr>;
+                    }
+                    
                     rows.push(row);    
                 });
                 return rows;
