@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <style>
+            .success {
+                color: green;
+            }
+            .failure {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <div id="message"></div>
+        <script type="text/jsx">
+            function login(){
+                let userName = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let output = <h3 className="success">Logging in...</h3>;
+                if(userName !== 'admin' || password !== 'admin') {
+                    output = <h3 className="failure">Invalid username or password</h3>;
+                }
+                else {
+                    document.getElementById("loginbutton").disabled = true;
+                }
+                ReactDOM.render(output,document.getElementById("message"));
+            }
+
+            let loginForm = (<div>
+                <input type="text" placeholder="Username" id="username"/>
+                <br/>
+                <input type="password" placeholder="password" id="password"/>
+                <br/>
+                <button type="button" id="loginbutton" onClick={login}>Login</button>    
+            </div>);
+            ReactDOM.render(loginForm,document.getElementById("root"));
+        </script>
+    </body>
+</html>    
